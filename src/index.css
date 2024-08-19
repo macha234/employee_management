@@ -1,0 +1,49 @@
+body {
+    background-color: skyblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;   
+    
+}
+.large{
+    text-align: center;
+}
+.btn_start{
+    margin: 0px, 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: orange;
+}
+.manage__large{
+    text-align: center;
+}
+table{
+    width: 100%;
+}
+td,
+th {
+    margin: 60px;
+}
+.actions > button{
+    margin-left: 10px;
+}
+.edit__btn{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(102, 223, 102);
+    color: white;
+}
+.remove__btn {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+}
