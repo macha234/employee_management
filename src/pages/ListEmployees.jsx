@@ -1,8 +1,13 @@
 import Form from "../componnts/Form";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function ListEmployees() {
-    const [employees, setEmployees] = useState([])
+    const [employees, setEmployees] = useState(
+        Array.isArray(JSON.parse(localStorage.getItem("employees")))
+        ? JSON.parse(localStorage.getItem("employees"))
+        : []
+    )
 
 function removeEmployee(id){
     const newEmployees = employees.filter(employee => employee.id !== id)
@@ -36,7 +41,11 @@ function removeEmployee(id){
                         <td>{employee.department}</td>
                         <td>{employee.salary}</td>
                         <td className="actions">
+                            
+                            <Link to = "/edit">
                             <button className="edit__btn">Edit</button>
+                            </Link>
+                            
                             <button onClick={()=>removeEmployee(employee.id)} className="remove__btn">Remove</button>
                         </td>
                     </tr>

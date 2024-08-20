@@ -27,7 +27,10 @@ function Form({ employees, setEmployees }) {
             newData.push(data)
 
             setEmployees(newData)
+
+            localStorage.setItem("employees", JSON.stringify(newData))
         }
+
 
         return(
             <>
