@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <ListEmployees />
   },
   {
-    path: "/edit",
+    path: "/edit/:id",
     element: <Edit />
   }
 ]);

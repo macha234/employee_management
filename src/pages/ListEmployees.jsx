@@ -42,7 +42,7 @@ function removeEmployee(id){
                         <td>{employee.salary}</td>
                         <td className="actions">
                             
-                            <Link to = "/edit">
+                            <Link to={`/edit/${employee.id}`}>
                             <button className="edit__btn">Edit</button>
                             </Link>
                             
